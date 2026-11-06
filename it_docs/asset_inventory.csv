@@ -1,0 +1,16 @@
+name;typ;ip_oder_netz;rolle;verantwortlich;notiz
+app-01;VM;10.0.1.15;MedCloud-Connect (gunicorn, Python 3.12);ext. Vogel IT-Services;Deployments manuell durch Dienstleister
+backup-01;VM;10.0.1.20;Backup-Job täglich 02:00;it.admin;nutzt svc-medcloud
+db-prod;Managed PostgreSQL;db-prod.medcloud.internal;Anwendungsdatenbank;it.admin;öffentlicher Endpunkt aktiv, Firewall any/any (siehe CHG-1031)
+lb-01;Load Balancer;10.0.0.2;HTTPS-Terminierung, WAF, Healthchecks;it.admin;
+monitoring;Agent;10.0.0.5;Metriken (svc-monitoring);it.admin;keine Security-Alerts konfiguriert
+vpn-gw01;VPN-Gateway;10.8.0.0/24;VPN für IT, Site-to-Site für Kliniken;it.admin;MFA seit CHG-1028
+svc-medcloud;Service Account;-;App UND Backup-Job;dev.mueller;AdministratorAccess, statischer Key, Rotation: nie
+svc-monitoring;Service Account;10.0.0.5;Monitoring;it.admin;nur Lesen Metriken
+svc-rad-vendor;Service Account;198.51.100.77;Fernwartung CT-Geräte (Siebert Medizintechnik);it.admin;liest täglich medcloud-logs/devices/, Aufnahme in Freigabeliste beantragt (SEC-131)
+svc-reporting;Service Account;10.0.2.31;Reporting-Batch werktags, liest Exporte des Vortags (ca. 30–40 Objekte am Stück);dev.schmidt;
+it.admin;Benutzer;VPN;IT-Administration;m.berger;
+ext.h.vogel;Benutzer (extern);198.51.100.10;Dienstleister Vogel IT-Services;m.berger;Büro-IP freigegeben
+dev.mueller;Benutzer;VPN;Entwicklung;it.admin;
+dev.schmidt;Benutzer;VPN;Entwicklung;it.admin;
+j.krause;Benutzer;VPN;IT-Betrieb, Rufbereitschaft;it.admin;

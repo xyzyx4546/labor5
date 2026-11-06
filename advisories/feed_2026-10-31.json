@@ -1,0 +1,182 @@
+[
+  {
+    "id": "PYSEC-2026-0112",
+    "published": "2026-03-02",
+    "summary": "Jinja2 sandbox breakout via format strings",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "jinja2"
+        },
+        "ranges": [
+          {
+            "introduced": "0",
+            "fixed": "3.1.5"
+          }
+        ]
+      }
+    ],
+    "severity": "HIGH"
+  },
+  {
+    "id": "PYSEC-2026-0187",
+    "published": "2026-06-18",
+    "summary": "Werkzeug debugger allows RCE if application runs with debug=True and is reachable",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "werkzeug"
+        },
+        "ranges": [
+          {
+            "introduced": "0",
+            "fixed": "3.1.4"
+          }
+        ]
+      }
+    ],
+    "severity": "HIGH",
+    "notes": "Nur ausnutzbar, wenn der Debugger aktiviert ist."
+  },
+  {
+    "id": "PYSEC-2026-0201",
+    "published": "2026-07-09",
+    "summary": "Pillow heap overflow in TGA decoder",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "pillow"
+        },
+        "ranges": [
+          {
+            "introduced": "10.0.0",
+            "fixed": "10.4.1"
+          }
+        ]
+      }
+    ],
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "PYSEC-2026-0233",
+    "published": "2026-08-21",
+    "summary": "urllib3 proxy credential leak on redirect",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "urllib3"
+        },
+        "ranges": [
+          {
+            "introduced": "2.0.0",
+            "fixed": "2.2.2"
+          }
+        ]
+      }
+    ],
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "MAL-2026-1290",
+    "published": "2026-09-30",
+    "summary": "Typosquatting package 'reqeusts-oauth' steals tokens",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "reqeusts-oauth"
+        },
+        "versions": [
+          "0.1.0",
+          "0.1.1"
+        ]
+      }
+    ],
+    "severity": "CRITICAL"
+  },
+  {
+    "id": "MAL-2026-1337",
+    "published": "2026-10-29",
+    "summary": "Malicious release of pdf-glyphkit exfiltrates environment variables via DNS",
+    "details": "Nach Übernahme des Maintainer-Accounts wurde am 2026-10-22 die Version 0.9.3 veröffentlicht. Beim Import liest das Paket alle Umgebungsvariablen und sendet sie base32-kodiert als DNS-Anfragen an *.t.glyphkit-cdn.example. Die Version wurde am 2026-10-29 von PyPI entfernt.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "pdf-glyphkit"
+        },
+        "versions": [
+          "0.9.3"
+        ]
+      }
+    ],
+    "severity": "CRITICAL",
+    "references": [
+      "https://advisories.example/MAL-2026-1337"
+    ]
+  },
+  {
+    "id": "PYSEC-2026-0251",
+    "published": "2026-09-11",
+    "summary": "PyJWT accepts tokens with alg=none when algorithms list empty",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "pyjwt"
+        },
+        "ranges": [
+          {
+            "introduced": "0",
+            "fixed": "2.8.1"
+          }
+        ]
+      }
+    ],
+    "severity": "HIGH"
+  },
+  {
+    "id": "PYSEC-2026-0260",
+    "published": "2026-10-02",
+    "summary": "fonttools XXE in SVG table parser",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "fonttools"
+        },
+        "ranges": [
+          {
+            "introduced": "4.0.0",
+            "fixed": "4.43.0"
+          }
+        ]
+      }
+    ],
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "PYSEC-2026-0274",
+    "published": "2026-10-15",
+    "summary": "gunicorn request smuggling via chunked encoding",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "gunicorn"
+        },
+        "ranges": [
+          {
+            "introduced": "0",
+            "fixed": "22.0.0"
+          }
+        ]
+      }
+    ],
+    "severity": "HIGH"
+  }
+]

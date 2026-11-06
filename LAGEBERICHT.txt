@@ -1,0 +1,35 @@
+LAGEBERICHT - MedCloud-Connect / HealthTech Solutions GmbH
+Stand: 2026-10-31 07:00 UTC   Einstufung: KRITISCH   TLP:AMBER
+
+Freitag, 2026-10-30, 23:52 UTC: Kliniken melden, dass Befunde nicht mehr geöffnet werden können.
+Auf app-01 liegt eine Erpressernachricht (live_storage_app-01/README_RESTORE.txt).
+
+Gesicherte Beweismittel (alle Zeiten UTC):
+  logs/web_access.log      Reverse Proxy / WAF vor der Web-App (nginx combined)
+  logs/idp_auth.jsonl      Identity Provider (Logins der Menschen, MFA)
+  logs/cloud_audit.jsonl   Audit-Trail der Cloud-API (alle API-Aufrufe, auch Service Accounts)
+  logs/db_postgres.log     Statement-Log der Managed Database
+  logs/dns_resolver.log    DNS-Resolver des VPC (Anfragen der Server)
+  logs/vpn_gateway.log     VPN-Gateway (IT-Personal, Site-to-Site-Tunnel der Kliniken)
+  logs/syslog_app-01.log   Systemlog des App-Servers
+  logs/backup-01_job.log   Protokoll des Backup-Jobs
+  it_docs/                 Export aus dem IT-Wiki (Change-Log, Inventar, Runbook)
+  sbom/                   SBOMs der App-Versionen 3.2.0 und 3.2.1 (CycloneDX)
+  advisories/              Advisory-Feed (Stand 31.10.)
+  cloud_snapshot/          Forensische Kopie von Bucket-Inhalten
+  backups/                 Inhalte beider Backup-Buckets
+  malware/                 Sichergestellte Schadsoftware (entschärft)
+  live_storage_app-01/     Verschlüsselte Dateien vom App-Server
+
+Bekannte Netze:
+  10.0.0.0/24   Plattform (LB 10.0.0.2, Monitoring 10.0.0.5)
+  10.0.1.0/24   Server (app-01 10.0.1.15, backup-01 10.0.1.20)
+  10.0.2.0/24   Analyse/Reporting
+  10.0.3.0/24   Entwickler-VMs
+  10.8.0.0/24   VPN der IT
+  10.20.0.0/16  Kliniken (Site-to-Site-VPN)
+  198.51.100.10 Büro des externen Dienstleisters Vogel IT-Services (freigegeben)
+  Weitere Partner und technische Konten: it_docs/asset_inventory.csv
+  Policy: Zugriff auf die Cloud nur über VPN oder freigegebene Netze.
+
+Hinweis: Alle Personen, Patienten, Pakete und Advisories sind fiktiv.

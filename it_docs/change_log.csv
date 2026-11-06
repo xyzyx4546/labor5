@@ -1,0 +1,10 @@
+ticket;datum;system;beschreibung;beantragt_von;genehmigt_von;status
+CHG-1012;2026-08-27;db-prod;Minor-Upgrade PostgreSQL 16.3 -> 16.4;it.admin;m.berger;erledigt
+CHG-1018;2026-09-14;medcloud-connect;Deployment Version 3.2.0;ext.h.vogel;m.berger;erledigt
+CHG-1021;2026-09-22;app-01;Kernel-Updates und Neustart;it.admin;m.berger;erledigt
+CHG-1024;2026-10-07;medcloud-connect;Hotfix 3.2.0-1: SQL-Abfragen parametrisiert (Audit Labor 4);ext.h.vogel;m.berger;erledigt
+CHG-1027;2026-10-19;medcloud-backup-worm;Sofortmaßnahme Audit: zweiter Backup-Bucket mit Object Lock (COMPLIANCE, 30 Tage);it.admin;m.berger;erledigt
+CHG-1028;2026-10-20;IdP;MFA (TOTP) für alle Benutzerkonten verpflichtend;it.admin;m.berger;erledigt
+CHG-1029;2026-10-21;WAF;OWASP Core Rule Set im Blocking-Modus;it.admin;m.berger;erledigt
+CHG-1031;2026-11-09;db-prod;Firewall-Review: öffentlichen Endpunkt schließen (Audit Nr. 14);it.admin;;geplant
+CHG-1032;2026-11-16;svc-medcloud;Service Account aufteilen, Rechte reduzieren (Audit Nr. 7/13);dev.mueller;;geplant

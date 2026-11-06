@@ -1,0 +1,9 @@
+# Logging-Konfiguration app-01
+level: INFO
+handlers:
+  - syslog
+audit:
+  cloud_api: enabled   # Audit-Trail des Providers
+  database_statements: enabled
+alerting:
+  security_alerts: []   # TODO (Audit Nr. 18)

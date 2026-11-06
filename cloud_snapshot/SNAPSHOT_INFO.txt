@@ -1,0 +1,4 @@
+Forensische Kopie ausgewählter Objekte, gesichert am 2026-10-31 06:10 UTC durch das IR-Team.
+Quelle: GlobalCloud Object Storage, Region eu-central-1.
+medcloud-config/            -> vollständig
+medcloud-exports/           -> Stichprobe: klinik-koeln-sued/2026-10-26/ (3 Objekte)

@@ -1,0 +1,5 @@
+standard/   -> Kopie des Buckets medcloud-backup (Versionierung: aus, Aufbewahrung 7 Tage)
+               gesichert wurden für beide Buckets die Snapshots 24.10.–30.10.
+immutable/  -> Kopie des Buckets medcloud-backup-worm (Object Lock COMPLIANCE, 30 Tage)
+               eingeführt nach dem Audit aus Labor 1 als Sofortmaßnahme
+Backup-Job: täglich 02:00 UTC auf backup-01 (10.0.1.20), Identität svc-medcloud

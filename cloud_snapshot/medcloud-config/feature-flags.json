@@ -1,0 +1,7 @@
+{
+  "pdf_preview": true,
+  "new_dashboard": false,
+  "export_nightly": true,
+  "wiki_search": true,
+  "debug_toolbar": false
+}
